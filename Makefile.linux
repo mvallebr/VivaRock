@@ -1,0 +1,13 @@
+
+all: 
+	cd src && make -f Makefile.linux all 
+
+
+clean: 
+	cd src && make -f Makefile.linux clean 
+
+purge:
+	cd src && make -f Makefile.linux purge && rm -f vivarock*.stackdump
+	
+run: all
+	cd bin && ./vivarock 

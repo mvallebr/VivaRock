@@ -1,0 +1,20 @@
+header
+$
+cenários
+$
+musicas
+
+
+exemplo:
+
+Viva rock 
+3 
+0
+$
+cenario1.cen
+cenario2.cen
+$
+musica1.msc
+musica2.msc
+musica3.msc
+musica4.msc

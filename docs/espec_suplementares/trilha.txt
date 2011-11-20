@@ -1,0 +1,12 @@
+Primeira linha:
+	Número de pontos necessários para vitória, ex.:
+142
+$
+Todas as linhas restantes tem o formato abaixo:
+00:00:00 099 ABCDE
+	Onde:
+		mm:ss lll
+		mm = minuto, 2 digitos
+		ss = segundo, 2 dígitos
+		lll = milésimos, 3 digitos
+		ABCDE

@@ -1,0 +1,11 @@
+primeira linha: offset de tempo em mili segundos
+$
+da terceira linha até $, arquivos de audio que vão tocar sempre
+banda.wav
+$
+agora, vem repetidas vezes trilhas de audio com descricao, separadas por linha. Deve haver no mínimo 1 trilha e no máximo 3
+trilha1 trilha1.wav trilha1_facil.dat trilha1_medio.dat trilha1_dificil.dat DESCRITOR_INSTRUMENTO
+trilha2 trilha2.wav trilha2_facil.dat trilha2_medio.dat trilha2_dificil.dat DESCRITOR_INSTRUMENTO
+trilha3 trilha3.wav trilha3_facil.dat trilha3_medio.dat trilha3_dificil.dat DESCRITOR_INSTRUMENTO
+onde DESCRITOR_INSTRUMENTO  pode ser GUITARRA,BATERIA,BAIXO
+$ Marca final de arquivo

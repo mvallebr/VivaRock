@@ -1,0 +1,43 @@
+
+OBJS=	main.o \
+	system/vrSystem.o system/vrGameLoop.o system/sceneNode.o \
+	system/vrScreenManager.o system/vrEventReceiver.o \
+	system/vrScreen.o system/vrSound.o \
+	screens/vrScreenTest.o screens/vrScreenTest3d.o		screens/vrScreenSelectMusic.o \
+	screens/vrScreenSelectDifficult.o  screens/vrScreenGame.o \
+	screens/vrScreenStartUp.o \
+	core/vrGame.o core/vrScenario.o core/vrMusic.o core/vrMusicTrack.o \
+	core/vrPlayer.o 
+	
+	
+CXX=g++
+IRRLICHT_DIR=/windows/pastas/devenv/irrlicht-1.5
+IRR_CPPFLAGS=-I$(IRRLICHT_DIR)/include
+IRR_LDFLAGS=-L$(IRRLICHT_DIR)/lib/Linux -lIrrlicht -lGL -lGLU -L/usr/lib -lXxf86vm
+
+SDL_FFMPEG_DIR=C:/pastas/devEnv/SDL_ffmpeg-0.7.0
+SDL_FFMPEG_CPPFLAGS=-I$(SDL_FFMPEG_DIR)/include
+SDL_FFMPEG_LDFLAGS=-L$(SDL_FFMPEG_DIR)/lib -lSDL_ffmpeg -lmingw32 -lwsock32
+
+SDL_DIR=C:/pastas/devEnv/SDL-1.2.13
+SDL_CPPFLAGS=$(sdl-config --cflags)
+SDL_LDFLAGS=$(sdl-config --libs) -lSDL_sound
+
+CPPFLAGS=-g -Wall -O2 -I. $(IRR_CPPFLAGS) $(SDL_CPPFLAGS) 
+#$(SDL_FFMPEG_CPPFLAGS)  
+LDFLAGS=$(IRR_LDFLAGS)  $(SDL_LDFLAGS) 
+#$(SDL_FFMPEG_LDFLAGS) 
+PROGNAME=../bin/vivarock
+
+all: $(OBJS)
+	$(CXX)  $(OBJS) -o $(PROGNAME)  $(LDFLAGS) 
+
+clean: 
+	rm -f *.o *~ *.bak $(PROGNAME).exe
+	cd core && rm -f *.o *~ *.bak 
+	cd screens && rm -f *.o *~ *.bak 
+	cd system && rm -f *.o *~ *.bak
+	
+purge: clean 
+	rm -f $(PROGNAME).exe
+	

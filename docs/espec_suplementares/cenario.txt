@@ -1,0 +1,18 @@
+Primeira linha: descrição do cenário
+Viva Rock n' Roll em Las Vegas
+Segunda linha: contem o nome do arquivo irr que terá as animações de fundo do jogo
+nome_arquivo.irr
+$
+Da terceira linha em diante, vem 3 definições de guitarra, como a abaixo:
+0- DESCRITOR_INSTRUMENTO  (pode ser GUITARRA,BATERIA,BAIXO)
+1- nome_arquivo_img_braco_guitarra offset_esquerda offset_colisao_notas
+2- nome_arquivo_img_nota1 offset_esquerda 
+3- nome_arquivo_img_nota2 offset_esquerda 
+4- nome_arquivo_img_nota3 offset_esquerda 
+5- nome_arquivo_img_nota4 offset_esquerda 
+6- nome_arquivo_img_nota5 offset_esquerda 
+7- offset_topo_aperto_botao erro1_offset_topo_aperto_botao erro2_offset_topo_aperto_botao
+onde erro1_offset_topo_aperto_botao = acertou bem no centro
+erro2_offset_topo_aperto_botao = acertou um pouco abaixo ou um pouco acima do centro
+se o aperto for feito fora dos erros descritos acima, então acertou fora do centro.
+$
